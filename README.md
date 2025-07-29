@@ -1,5 +1,4 @@
 # 数学建模-记录仓库
 一个用来存放练习文件的仓库
 
-> [!Note]
-> 在 `Pandas/data` 中，应该还有一个 `yellow_tripdata_2022-01.csv` 的文件，文件太大上传失败，故采用压缩包上传
+> Pandas库的学习笔记源自B站up主 懒人老刘LazyLiu
