@@ -27,7 +27,7 @@
 
 ### 2.2 速度和位置的更新
 #### PSO标准形式：（公式1和公式2）
-$$v_i=v_i+c_1\times rand\left( 0,1 \right) \times \left( pbest_i-x_i \right) +c_2\times rand\left( 0,1 \right) \times \left( gbest_i-x_i \right) \tag{1} $$
+$$v_i=v_i+c_1\times rand\left( 0,1 \right) \times \left( pbest_i-x_i \right) +c_2\times rand\left( 0,1 \right) \times \left( gbest_i-x_i \right) \tag{1}$$
 $$x_i=x_i+v_i \tag{2}$$
 其中，
 $i=1,2,\cdots,N$，$N$为粒子总数
@@ -37,9 +37,9 @@ $x_i$：粒子的当前位置
 $c_1$，$c_2$：自身学习因子和社会学习因子，通常都为2
 
 对于公式1：
-| 项         | 公式                                                                 | 含义                                                                       |
-| ---------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 记忆项     | $v_i$                                                                | 表示上次速度大小和方向的影响                                               |
+| 项         | 公式       | 含义       |
+| ---------- | ---------------------------- | -------------------- |
+| 记忆项     | $v_i$      | 表示上次速度大小和方向的影响     |
 | 自身认知项 | $c_1\times rand\left( 0,1 \right) \times \left( pbest_i-x_i \right)$ | 是从当前点指向粒子自身最好点的一个矢量，表示粒子的动作来源于自己经验的部分 |
 | 群体认知项 | $c_2\times rand\left( 0,1 \right) \times \left( gbest_i-x_i \right)$ | 是一个从当前点指向种群最好点的矢量，反映了粒子间的协同合作和知识共享       |
 
@@ -64,7 +64,7 @@ $\omega_{end}$：迭代至最大进化代数时的惯性权值，典型为0.4
 6. 未达到结束条件则转第2步
 > 迭代终止条件一般选为最大迭代次数$G_k$或(和)微粒群迄今为止搜索到的最优位置满足预定最小适应阈值
 
-<img src="images/PSO_default.png">
+<img src="images/PSO_default.png" title="PSO标准流程" alt="PSO标准流程">
 
 ------------------------------------------------------
 
@@ -125,4 +125,4 @@ $$x_{i}^{\left( t+1 \right)}=x_{i}^{\left( t \right)}+v_{i}^{\left( t+1 \right)}
 4. **更新速度与位置**：按上述公式更新所有粒子的速度和位置
 5. **终止条件**：达到最大迭代次数（150 次）后，输出`gbest`对应的权重及参数
 
-<img src="images/PSO_SPD.png">
+<img src="images/PSO_SPD.png" title="PSO_SPD" alt="PSO_SPD">
